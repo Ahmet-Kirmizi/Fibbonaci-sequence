@@ -1,27 +1,25 @@
-# soo lets ask for the number of sequence they want:
-# lets take its integer value cos an input function always return a string
+# lets create a input variable that ask for the sequence
 
-sequence = int(input('How many terms do you want?'))
+nth_term = int(input('please enter the number of sequences you want to see: '))
 
-# there will be 2 numbers
-number1 = 0
-number2 = 1
-
-# a count variable:
+# count variable that  will be used to break the while loop
 count = 0
+# everytime the loop starts over it will update count
+# it will have 2 numbers
+number1, number2 = 0, 1
 
-
-if sequence <= 0:
-	print('Please enter a positive integer!')
-
-elif sequence == 1:
-	print('the sequence is',sequence,':')
-
+if nth_term <= 0:
+    print('Please enter a positive integer!')
+elif nth_term == 1:
+    print('this is your sequence',nth_term,':')
+    print(number1)
 else:
-	while count <= sequence:
-		print(number1)
-		print('Here is the Fibbonaci Sequence:')
-		number1 = number2
-		number2 = sequence
-		count =+ count
+    print('The Fibbonaci sequence:')
+    while count < nth_term:
+        print(number1)
+        nth = number1 + number2
+        number1 = number2
+        number2 = nth
+        count = count + 1
+    
 
